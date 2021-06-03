@@ -23,6 +23,8 @@ import { FooterComponent } from './pages/components/template/footer/footer.compo
 import { NavComponent } from './pages/components/template/nav/nav.component';
 import { HomeComponent } from './pages/components/home/home.component';
 import { TecnicoReadComponent } from './pages/components/tecnico/tecnico-read/tecnico-read.component';
+import { TecnicoCreateComponent } from './pages/components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoEditComponent } from './pages/components/tecnico/tecnico-edit/tecnico-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TecnicoReadComponent } from './pages/components/tecnico/tecnico-read/te
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TecnicoReadComponent
+    TecnicoReadComponent,
+    TecnicoCreateComponent,
+    TecnicoEditComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/components/home/home.component';
 import { TecnicoCreateComponent } from './pages/components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoDeleteComponent } from './pages/components/tecnico/tecnico-delete/tecnico-delete.component';
+import { ClienteReadComponent } from './pages/components/cliente/cliente-read/cliente-read.component';
 
 const routes: Routes = [
   {
@@ -27,8 +28,10 @@ const routes: Routes = [
     path: 'tecnicos/delete/:idTecnico',
     component: TecnicoDeleteComponent
   },
-
-
+  {
+    path: 'clientes',
+    component: ClienteReadComponent
+  },
 ];
 
 @NgModule({

@@ -35,6 +35,11 @@ export class ClienteService {
     return this.http.put<Cliente>(url, cliente);
   }
 
+  delete(idCliente: any): Observable<void> {
+    const url = `${this.baseUrl}/clientes/${idCliente}`;
+    return this.http.delete<void>(url);
+  }
+
   message(msg: String): void {
     this.snack.open(`${msg}`, 'OK', {
       horizontalPosition: 'end',

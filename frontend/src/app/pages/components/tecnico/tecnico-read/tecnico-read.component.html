@@ -38,7 +38,15 @@
               <mat-icon>edit</mat-icon>
             </button>  
           </a>
+
+          <a class="delete" routerLink="delete/{{ element.id }}">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon">
+              <mat-icon>delete</mat-icon>
+            </button>  
+          </a>
+
         </td>
+
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ClienteService {
 
- 
+
   baseUrl: String = environment.baseUrl;
 
   constructor(private http: HttpClient, private snack: MatSnackBar) { }
@@ -18,6 +18,21 @@ export class ClienteService {
   findAll(): Observable<Cliente[]> {
     const url = this.baseUrl + '/clientes';
     return this.http.get<Cliente[]>(url);
+  }
+
+  findById(idCliente: any): Observable<Cliente> {
+    const url = `${this.baseUrl}/clientes/${idCliente}`;
+    return this.http.get<Cliente>(url);
+  }
+
+  create(cliente: Cliente): Observable<Cliente> {
+    const url = this.baseUrl + '/clientes';
+    return this.http.post<Cliente>(url, cliente);
+  }
+
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = this.baseUrl + '/clientes/' + cliente.id;
+    return this.http.put<Cliente>(url, cliente);
   }
 
   message(msg: String): void {

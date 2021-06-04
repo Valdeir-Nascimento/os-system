@@ -14,17 +14,27 @@ export class TecnicoService {
 
   constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
-  findAll() : Observable<Tecnico[]> {
+  findAll(): Observable<Tecnico[]> {
     const url = this.baseUrl + '/tecnicos';
     return this.http.get<Tecnico[]>(url);
   }
-  
-  create(tecnico: Tecnico) : Observable<Tecnico> {
+
+  findById(idTecnico: any): Observable<Tecnico> {
+    const url = `${this.baseUrl}/tecnicos/${idTecnico}`;
+    return this.http.get<Tecnico>(url);
+  }
+
+  create(tecnico: Tecnico): Observable<Tecnico> {
     const url = this.baseUrl + '/tecnicos';
     return this.http.post<Tecnico>(url, tecnico);
   }
 
-  message(msg: String) : void {
+  update(tecnico: Tecnico): Observable<Tecnico> {
+    const url = this.baseUrl + '/tecnicos/' + tecnico.id;
+    return this.http.put<Tecnico>(url, tecnico);
+  }
+
+  message(msg: String): void {
     this.snack.open(`${msg}`, 'OK', {
       horizontalPosition: 'end',
       verticalPosition: 'top',

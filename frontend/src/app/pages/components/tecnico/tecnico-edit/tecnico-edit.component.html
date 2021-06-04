@@ -18,7 +18,7 @@
         <mat-error *ngIf="telefone.invalid">{{ validTelefone() }}</mat-error>
     </mat-form-field>
 
-    <button [disabled]=" validNome() || validTelefone() || validCpf()" class="mat-elevation-z8 container" mat-raised-button color="primary">
+    <button (click)="update()" [disabled]=" validNome() || validTelefone() || validCpf()" class="mat-elevation-z8 container" mat-raised-button color="primary">
         Salvar
     </button>
 

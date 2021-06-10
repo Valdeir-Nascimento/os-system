@@ -14,7 +14,6 @@ export class TecnicoEditComponent implements OnInit {
   idTecnico = '';
 
   tecnico: Tecnico = {
-    id: '',
     nome: '',
     cpf: '',
     telefone: ''

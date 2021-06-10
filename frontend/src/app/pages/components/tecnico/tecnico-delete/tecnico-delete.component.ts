@@ -13,7 +13,7 @@ export class TecnicoDeleteComponent implements OnInit {
   idTecnico = '';
 
   tecnico: Tecnico = {
-    id: '',
+   
     nome: '',
     cpf: '',
     telefone: ''

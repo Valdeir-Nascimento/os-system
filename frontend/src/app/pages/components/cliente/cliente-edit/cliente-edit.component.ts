@@ -14,7 +14,6 @@ export class ClienteEditComponent implements OnInit {
   idCliente = '';
 
   cliente: Cliente = {
-    id: '',
     nome: '',
     cpf: '',
     telefone: ''

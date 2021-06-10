@@ -28,3 +28,14 @@ table {
     padding-left: 10px;
 }
 
+td.baixa {
+    color: rgb(6, 255, 6);
+}
+
+td.media {
+    color: rgb(249, 253, 6);
+}
+
+td.alta {
+    color: rgb(252, 8, 8);
+}

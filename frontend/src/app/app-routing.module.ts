@@ -10,6 +10,8 @@ import { TecnicoDeleteComponent } from './pages/components/tecnico/tecnico-delet
 import { ClienteReadComponent } from './pages/components/cliente/cliente-read/cliente-read.component';
 import { ClienteCreateComponent } from './pages/components/cliente/cliente-create/cliente-create.component';
 import { OsReadComponent } from './pages/components/os/os-read/os-read.component';
+import { OsCreateComponent } from './pages/components/os/os-create/os-create.component';
+import { OsUpdateComponent } from './pages/components/os/os-update/os-update.component';
 
 const routes: Routes = [
   {
@@ -51,6 +53,14 @@ const routes: Routes = [
   {
     path: 'os',
     component: OsReadComponent
+  },
+  {
+    path: 'os/create',
+    component: OsCreateComponent
+  },
+  {
+    path: 'os/update',
+    component: OsUpdateComponent
   },
 ];
 

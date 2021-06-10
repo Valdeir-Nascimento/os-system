@@ -14,7 +14,7 @@ export class OsReadComponent implements AfterViewInit {
 
   ordemServicoList: OrdemServico[] = [];
 
-  displayedColumns: string[] = ['tecnico', 'cliente','dataAbertura', 'dataFechamento', 'prioridade', 'status', 'operacoes'];
+  displayedColumns: string[] = ['tecnico', 'cliente', 'dataAbertura', 'dataFechamento', 'prioridade', 'status', 'operacoes'];
 
   dataSource = new MatTableDataSource<OrdemServico>(this.ordemServicoList);
 
@@ -36,6 +36,16 @@ export class OsReadComponent implements AfterViewInit {
 
   navigateToCreate(): void {
     this.router.navigate(['os/create']);
+  }
+
+  prioridade(tipo: any) {
+    if (tipo == 'BAIXA') {
+      return 'baixa';
+    } else if (tipo == 'MEDIA') {
+      return 'media'
+    } else {
+      return 'alta'
+    }
   }
 
 }

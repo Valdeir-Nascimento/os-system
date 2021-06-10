@@ -31,7 +31,7 @@ export class ClienteReadComponent implements AfterViewInit {
   findAll(): void {
     this.clienteService.findAll().subscribe(resposta => {
       this.clientes = resposta;
-      this.dataSource = new MatTableDataSource<Tecnico>(this.clientes);
+      this.dataSource = new MatTableDataSource<Cliente>(this.clientes);
       this.dataSource.paginator = this.paginator;
     })
   }

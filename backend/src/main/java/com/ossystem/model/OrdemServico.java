@@ -3,11 +3,9 @@ package com.ossystem.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ossystem.model.enums.Prioridade;
 import com.ossystem.model.enums.Status;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.apache.tomcat.jni.Lock;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -23,12 +21,15 @@ public class OrdemServico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String observacao;
+
     @CreationTimestamp
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime dataAbertura;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime dataFechamento;
-    private String observacao;
+
     @Enumerated(EnumType.STRING)
     private Prioridade prioridade;
     @Enumerated(EnumType.STRING)

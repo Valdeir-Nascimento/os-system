@@ -1,5 +1,5 @@
 export interface Tecnico {
-    id?: any;
+    id?: Number;
     nome: string;
     cpf: string;
     telefone: string;

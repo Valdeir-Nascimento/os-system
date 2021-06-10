@@ -14,7 +14,6 @@ export class ClienteDeleteComponent implements OnInit {
   idCliente = '';
 
   cliente: Cliente = {
-    id: '',
     nome: '',
     cpf: '',
     telefone: ''

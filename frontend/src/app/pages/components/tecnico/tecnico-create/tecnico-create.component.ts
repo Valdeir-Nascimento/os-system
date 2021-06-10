@@ -12,7 +12,6 @@ import { Tecnico } from './../../../../model/tecnico';
 export class TecnicoCreateComponent implements OnInit {
 
   tecnico: Tecnico = {
-    id: '',
     nome: '',
     cpf: '',
     telefone: ''

@@ -11,7 +11,6 @@ import { Cliente } from 'src/app/model/cliente';
 })
 export class ClienteCreateComponent implements OnInit {
   cliente: Cliente = {
-    id: '',
     nome: '',
     cpf: '',
     telefone: ''

@@ -12,6 +12,8 @@ import { ClienteCreateComponent } from './pages/components/cliente/cliente-creat
 import { OsReadComponent } from './pages/components/os/os-read/os-read.component';
 import { OsCreateComponent } from './pages/components/os/os-create/os-create.component';
 import { OsUpdateComponent } from './pages/components/os/os-update/os-update.component';
+import { OsViewComponent } from './pages/components/os/os-view/os-view.component';
+import { OsClosedComponent } from './pages/components/os/os-closed/os-closed.component';
 
 const routes: Routes = [
   {
@@ -55,12 +57,20 @@ const routes: Routes = [
     component: OsReadComponent
   },
   {
+    path: 'os/closed',
+    component: OsClosedComponent
+  },
+  {
     path: 'os/create',
     component: OsCreateComponent
   },
   {
-    path: 'os/update',
+    path: 'os/update/:idOrdemServico',
     component: OsUpdateComponent
+  },
+  {
+    path: 'os/view/:idOrdemServico',
+    component: OsViewComponent
   },
 ];
 

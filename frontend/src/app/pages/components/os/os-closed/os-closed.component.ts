@@ -1,16 +1,16 @@
-import { OrdemServico } from './../../../../model/ordem_servico';
-import { Router } from '@angular/router';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { OrdemServico } from 'src/app/model/ordem_servico';
 import { OrdemServicoService } from 'src/app/services/os.service';
 
 @Component({
-  selector: 'app-os-read',
-  templateUrl: './os-read.component.html',
-  styleUrls: ['./os-read.component.css']
+  selector: 'app-os-closed',
+  templateUrl: './os-closed.component.html',
+  styleUrls: ['./os-closed.component.css']
 })
-export class OsReadComponent implements AfterViewInit {
+export class OsClosedComponent implements AfterViewInit {
 
   ordemServicoList: OrdemServico[] = [];
 
@@ -29,7 +29,7 @@ export class OsReadComponent implements AfterViewInit {
   findAll(): void {
     this.service.findAll().subscribe(resposta => {
       resposta.forEach(x => {
-        if(x.status != "ENCERRADO") {
+        if(x.status == "ENCERRADO") {
           this.ordemServicoList.push(x);
         }
       })
@@ -38,9 +38,7 @@ export class OsReadComponent implements AfterViewInit {
     })
   }
 
-  navigateToCreate(): void {
-    this.router.navigate(['os/create']);
-  }
+
 
   prioridade(tipo: any) {
     if (tipo == 'BAIXA') {

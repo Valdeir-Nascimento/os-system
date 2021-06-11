@@ -1,8 +1,5 @@
 <div class="create">
-    <h1>Ordens de Serviço</h1>
-    <button (click)="navigateToCreate()" class="mat-elevation-z8 container" mat-raised-button color="primary">
-        Nova Ordem de Serviço
-    </button>
+    <h1>Ordens de Serviço Encerradas</h1>
 </div>
 
 <div class="mat-elevation-z8 container">
@@ -45,13 +42,13 @@
         <ng-container matColumnDef="operacoes">
             <th mat-header-cell *matHeaderCellDef> Operações </th>
             <td mat-cell *matCellDef="let element">
-                <a routerLink="update/{{ element.id }}">
+                <a routerLink="../update/{{ element.id }}">
                     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon">
                         <mat-icon>edit</mat-icon>
                     </button>
                 </a>
 
-                <a routerLink="view/{{ element.id }}">
+                <a routerLink="../view/{{ element.id }}">
                     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon">
                         <mat-icon>visibility</mat-icon>
                     </button>

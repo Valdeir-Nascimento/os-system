@@ -33,6 +33,9 @@ import { ClienteDeleteComponent } from './pages/components/cliente/cliente-delet
 import { OsReadComponent } from './pages/components/os/os-read/os-read.component';
 import { OsCreateComponent } from './pages/components/os/os-create/os-create.component';
 import { OsUpdateComponent } from './pages/components/os/os-update/os-update.component';
+import { OsViewComponent } from './pages/components/os/os-view/os-view.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { OsClosedComponent } from './pages/components/os/os-closed/os-closed.component'; 
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { OsUpdateComponent } from './pages/components/os/os-update/os-update.com
     ClienteDeleteComponent,
     OsReadComponent,
     OsCreateComponent,
-    OsUpdateComponent
+    OsUpdateComponent,
+    OsViewComponent,
+    OsClosedComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,8 @@ import { OsUpdateComponent } from './pages/components/os/os-update/os-update.com
     MatInputModule,
     MatDatepickerModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
 
   ],
   providers: [],
